@@ -42,7 +42,6 @@ describe MatrixExpansion::Matriz_Densa do
             
             @m1.matrix[0][1] = 8
             @m1.matrix[0][1].should eq(8)
-            @m1.set_valores_num
         end
     end
 
