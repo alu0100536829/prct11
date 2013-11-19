@@ -136,26 +136,22 @@ module MatrixExpansion
                                         i += 1
                                   end # while i
                         else # Matriz * Matriz
-                                  raise ArgumentError , 'Matriz no compatible (A.fil == B.col)' unless @col == other.fil
-                                  c = Matriz_Densa.new(@fil, other.col)
-                                  i = 0
-                                  while(i < @fil)
+                                raise ArgumentError , 'Matriz no compatible (A.fil == B.col)' unless @col == other.fil
+                                c = Matriz_Densa.new(@fil, other.col)
+                                i = 0
+                                while(i < @fil)
                                     j = 0
                                     while(j < other.col)
-                                                  k = 0
-                                            if (@matrix[i][j].is_a? Fraccion)                                              
-                                                    c.matrix[i][j] = Fraccion.new(0,1)
-                                            else
-                                                    c.matrix[i][j] = 0
-                                            end
-                                                  while(k < @col)
-                                                    c.matrix[i][j] += @matrix[i][k] * other.matrix[k][j]
-                                                    k += 1
-                                                  end # while k
-                                              j += 1
+                                        k = 0
+                                        c.matrix[i][j] = 0
+                                        while(k < @col)
+                                            c.matrix[i][j] += @matrix[i][k] * other.matrix[k][j]
+                                            k += 1
+                                        end # while k
+                                        j += 1
                                     end # while j
-                                        i += 1
-                                  end # while i
+                                    i += 1
+                                end # while i
                         end # while else
       
                         c
@@ -202,3 +198,4 @@ module MatrixExpansion
         end
     end # Class
 end # Module
+
