@@ -51,15 +51,9 @@ class Fraccion
         
         #Suma de fracciones
         def + (other)
-                if (other.is_a?Fixnum)
-                    comun = @b
-                    a1 = @a
-                    a2 = other * @b
-                else
-                    comun = @b * other.denom
-                    a1 = @a * other.denom
-                    a2 = other.num * @b
-                end
+                comun = @b * other.denom
+                a1 = @a * other.denom
+                a2 = other.num * @b
                 a3 = a1 + a2
                 k = gcd(a3,comun)
                 a3 /= k
@@ -69,20 +63,14 @@ class Fraccion
         
         #Resta de fracciones
         def - (other)
-            if (other.is_a?Fixnum)
-                comun = @b
-                a1 = @a
-                a2 = other * @b
-            else
                 comun = @b * other.denom
                 a1 = @a * other.denom
                 a2 = other.num * @b
-            end
-            a3 = a1 - a2
-            k = gcd(a3,comun)
-            a3 /= k
-            comun /= k
-            Fraccion.new(a3,comun)
+                a3 = a1 - a2
+                k = gcd(a3,comun)
+                a3 /= k
+                comun /= k
+                Fraccion.new(a3,comun)
         end
 
         #Opuesto de fracción. La suma de una fracción y su opuesto debe ser 0. 
@@ -99,13 +87,8 @@ class Fraccion
 
         #Producto de fracciones
         def * (other)
-            if (other.is_a?Fixnum)
-                a = @a * other
-                b = @b
-            else
                 a = @a * other.num
                 b = @b * other.denom
-            end
                 k = gcd(a,b)
                 a /= k
                 b /= k
@@ -138,7 +121,7 @@ class Fraccion
         end
         
         def coerce (other)
-            [self,other]
+            [Fraccion.new(other,1),self]
         end
         
         # #Comprueba si fracción es mayor que otra

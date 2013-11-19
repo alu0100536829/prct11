@@ -67,9 +67,33 @@ describe MatrixExpansion::Matriz_Densa do
             (@m3 - @m4).to_s.should == "0/1\t0/1\t\n0/1\t0/1\t\n"
         end
         
-        it " # Multiplicacion de matrices." do
+        it " # Producto de matrices." do
             (@m1 * @m2).to_s.should == "7\t10\t\n15\t22\t\n"
             (@m3 * @m4).to_s.should == "3/4\t13/15\t\n39/40\t57/50\t\n"
+        end
+        
+        it " # Suma de matrices de fracciones y numeros." do
+            (@m1 + @m3).to_s.should == "3/2\t8/3\t\n15/4\t24/5\t\n"
+        end
+        
+        it " # Resta de matrices de fracciones y numeros." do
+            (@m1 - @m3).to_s.should == "1/2\t4/3\t\n9/4\t16/5\t\n"
+        end
+        
+        it " # Producto de matrices de fracciones y numeros." do
+            (@m1 * @m3).to_s.should == "2/1\t34/15\t\n9/2\t26/5\t\n"
+        end
+    end
+    
+    describe " # Otras operaciones. " do
+        it " # Minimo de una matriz. " do
+            @m1.min.should eq(1)
+            @m3.min.to_s.should eq("1/2")
+        end
+        
+        it " # Maximo de una matriz. " do
+            @m1.max.should eq(4)
+            @m3.max.to_s.should eq("4/5")
         end
     end
     
