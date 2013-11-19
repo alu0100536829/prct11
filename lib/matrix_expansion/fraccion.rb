@@ -1,4 +1,4 @@
-require "./gcd.rb"
+require "./lib/matrix_expansion/gcd.rb"
 
 class Fraccion
         include Comparable

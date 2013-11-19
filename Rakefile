@@ -10,16 +10,21 @@ RSpec::Core::RakeTask.new
 task :default => :spec
 
 desc "Expectativas de la clase Matriz" 
+task :spec do
+        sh "rspec -I. spec/matrix_spec.rb"
+end
+
+desc "Expectativas de la clase Matriz, con documentacion" 
 task :test do
-        sh "rspec -I. spec/matriz_spec.rb --format documentation"
+        sh "rspec -I. spec/matrix_spec.rb --format documentation"
 end
 
 desc "Expectativas de la clase Matriz, con documentacion HTML"
 task :thtml do
-        sh "rspec -I. spec/matriz_spec.rb --format html"
+        sh "rspec -I. spec/matrix_spec.rb --format html"
 end
 
 desc "Pruebas unitarias de las clases Matriz_Densa y Matriz_Dispersa" 
 task :tc do
-        sh "ruby -I. test/tc_matriz.rb --format documentation"
+        sh "ruby -I. test/tc_matrix.rb --format documentation"
 end

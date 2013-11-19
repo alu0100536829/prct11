@@ -1,4 +1,4 @@
-require './fraccion.rb'
+require './lib/matrix_expansion/fraccion.rb'
 
 module MatrixExpansion
   class Matriz
