@@ -119,7 +119,7 @@ module MatrixExpansion
             while(i < @fil)
                 j = 0
                 while(j < @col)
-                    c.matrix[i][j] = @matrix[i][j] + other.matrix[i][j]
+                    c.matrix[i][j] = @matrix[i][j] + other.get(i,j)
                     j += 1
                 end 
                 i += 1
@@ -137,7 +137,7 @@ module MatrixExpansion
             while(i < @fil)
                 j = 0
                 while(j < @col)
-                    c.matrix[i][j] = @matrix[i][j] - other.matrix[i][j]
+                    c.matrix[i][j] = @matrix[i][j] - other.get(i,j)
                     j += 1
                 end
                 i += 1
@@ -174,7 +174,7 @@ module MatrixExpansion
                         k = 0
                         c.matrix[i][j] = 0
                         while(k < @col)
-                            c.matrix[i][j] += @matrix[i][k] * other.matrix[k][j]
+                            c.matrix[i][j] += @matrix[i][k] * other.get(k,j)
                             k += 1
                         end
                         j += 1
