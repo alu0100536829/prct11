@@ -90,7 +90,7 @@ module MatrixExpansion
       else # Elemento nulo (no esta en el Hash)
         return 0
       end
-    end #endmethod get
+    end
 
     def +(other)
         raise ArgumentError , 'El argumento debe ser una matriz' unless other.is_a? Matriz
@@ -147,7 +147,7 @@ module MatrixExpansion
                 i += 1
             end # while i
         else # Matriz * Matriz
-            raise ArgError , 'Matriz no compatible (A.fil == B.col)' unless @M == other.fil
+            raise ArgumentError , 'Matriz no compatible (A.fil == B.col)' unless @col == other.fil
             c = Matriz_Densa.new(@fil, other.col)
             i = 0
             while(i < @fil)
@@ -156,7 +156,7 @@ module MatrixExpansion
                     k = 0
                     c.matrix[i][j] = 0
                     while(k < @col)
-                        c.matrix[i][j] += get(i,j) * other.get(i,j)
+                        c.matrix[i][j] = c.matrix[i][j] + (get(i,j) * other.get(i,j))
                         k += 1
                     end # while k
                     j += 1

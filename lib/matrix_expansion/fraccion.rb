@@ -29,15 +29,6 @@ class Fraccion
         def to_f
                 @a.to_f / @b.to_f #conversion de tipo a flotante mediante to_f
         end
-
-        # #Comprueba si son iguales dos fracciones
-        # def == (other)
-        #         if(@a == other.num) && (@b == other.denom)
-        #                 return true 
-        #         else 
-        #                 return false
-        #         end
-        # end
         
         #Fracción pasada a float. (ej: 1.25)
         def abs
@@ -124,42 +115,4 @@ class Fraccion
             [Fraccion.new(other,1),self]
         end
         
-        # #Comprueba si fracción es mayor que otra
-        # def > (other)
-        #         if (self.to_f > other.to_f)
-        #                 return true
-        #         else
-        #                 return false
-        #         end
-        # end
-        
-        # #Comprueba si fracción es menor que otra
-        # def < (other)
-        #         if (self.to_f < other.to_f)
-        #                 return true
-        #         else
-        #                 return false
-        #         end
-        # end
-        
-        # #Comprueba si fracción es mayor o igual que otra
-        # def >= (other)
-        #         if (self.to_f >= other.to_f)
-        #                 return true
-        #         else
-        #                 return false
-        #         end
-        # end
-        
-        # #Comprueba si fracción es menor o igual que otra
-        # def <= (other)
-        #         if (self.to_f <= other.to_f)
-        #                 return true
-        #         else
-        #                 return false
-        #         end
-        # end
-
-        
-
 end

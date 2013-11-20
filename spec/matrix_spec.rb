@@ -98,3 +98,93 @@ describe MatrixExpansion::Matriz_Densa do
     
 end
 
+
+describe MatrixExpansion::Matriz_Densa do
+    
+    before :each do
+        @mden = MatrixExpansion::Matriz_Densa.new(2,2)
+        @mden.matrix[0][1] = 3
+        
+        @mdis1 = MatrixExpansion::Matriz_Dispersa.densa_a_dispersa(@mden)
+        
+        @mdis2 = MatrixExpansion::Matriz_Dispersa.new(2,2)
+        @mdis2.set(1,1,2)
+        
+        @mdis3 = MatrixExpansion::Matriz_Dispersa.new(2,2)
+        @mdis3.set(1,1,Fraccion.new(1,2))
+        
+    end
+    describe " # Almacenamiento de matrices. " do
+        it " # Se debe poder crear matrices dispersas vacias o a partir de matrices densas." do     
+            MatrixExpansion::Matriz_Dispersa.new(5, 5)
+            MatrixExpansion::Matriz_Dispersa.densa_a_dispersa(@mden)
+        end
+        it " # Se debe poder acceder a los datos almacenados en la matriz " do      
+            @mdis1.get(0,1).should eq(3)
+            @mdis2.get(1,1).should eq(2)
+        end
+        it " # Se deben poder modificar los datos almacenados en la matriz " do     
+            @mdis1.set(0,1,5)
+            @mdis1.get(0,1).should eq(5)
+            
+            @mdis2.set(1,1,8)
+            @mdis2.get(1,1).should eq(8)
+        end
+    end
+
+    describe " # Representacion de la matriz." do
+        it " # Mostrar la matriz con numeros." do
+            @mdis1.to_s.should == "(0,1)=>3 \n\n"
+        end
+        
+        it " # Mostrar la matriz con fracciones. " do
+            @mdis3.to_s.should == "\n(1,1)=>1/2 \n"
+        end 
+    end
+    describe " # Operaciones con matrices. " do
+        it " # Suma de matrices. " do
+            (@mdis1 + @mdis2).to_s.should == "0\t3\t\n0\t2\t\n"
+            (@mdis3 + @mdis3).to_s.should == "\n(1,1)=>1/1 \n"
+        end
+        
+        it " # Resta de matrices." do
+            (@mdis1 - @mdis2).to_s.should == "0\t3\t\n0\t-2\t\n"
+            (@mdis3 - @mdis3).to_s.should == "\n\n"
+        end
+        
+        it " # Producto de matrices." do
+            (@mdis1 * @mdis1).to_s.should == "(0,1)=>18 \n\n"
+            (@mdis3 * @mdis3).to_s.should == "\n(1,1)=>1/2 \n"
+        end
+        
+        it " # Suma de matrices de fracciones y numeros." do
+            (@mdis2 + @mdis3).to_s.should == "\n(1,1)=>5/2 \n"
+        end
+        
+        it " # Resta de matrices de fracciones y numeros." do
+            (@mdis2 - @mdis3).to_s.should == "\n(1,1)=>3/2 \n"
+        end
+        
+        it " # Producto de matrices de fracciones y numeros." do
+            (@mdis2 * @mdis3).to_s.should == "\n(1,1)=>2/1 \n"
+        end
+    end
+    
+    describe " # Otras operaciones. " do
+        it " # Minimo de una matriz. " do
+            @mdis1.min.should eq(3)
+            @mdis3.min.to_s.should eq("1/2")
+        end
+        
+        it " # Maximo de una matriz. " do
+            @mdis1.max.should eq(3)
+            @mdis3.max.to_s.should eq("1/2")
+        end
+    end
+        
+    
+    
+
+    
+    
+end

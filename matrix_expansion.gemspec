@@ -2,9 +2,9 @@
 require File.expand_path('../lib/matrix_expansion/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["TODO: Write your name"]
-  gem.email         = ["tenoglez@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
+  gem.authors       = ["Teno Gonzalez Dos Santos / Albano Jose Yanes Reyes"]
+  gem.email         = ["alu0100536829@ull.edu.es / alu0100457094@ull.edu.es"]
+  gem.description   = %q{Gema de matrices densas y dispersas}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""
 
