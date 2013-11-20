@@ -51,7 +51,15 @@ module MatrixExpansion
             end
         end
         
-        def null_percent
+        def get(i,j)
+            if( !(i.is_a? Fixnum) or i < 0 or i >=@fil or !(j.is_a? Fixnum) or j < 0 or j >= @col)
+                return nil
+            end
+            
+            return @matrix[i][j]
+        end
+        
+        def porcentaje_nulos
           total = @fil*@col
           no_nulos = 0
           
@@ -69,7 +77,7 @@ module MatrixExpansion
           
           nulos = total - no_nulos
           nulos.to_f/total.to_f
-        end #endmethod null_percent      
+        end
     
         
         def to_s
@@ -88,8 +96,8 @@ module MatrixExpansion
         end
         
         def +(other)
-                          raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
-                          raise ArgumentError , 'Matriz no compatible' unless @fil == other.fil and @col == other.col
+                          raise ArgumentError , 'El argumento debe ser una matriz' unless other.is_a? Matriz
+                          raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
       
                           c = Matriz_Densa.new(@fil, @col)
                           i = 0
@@ -105,8 +113,8 @@ module MatrixExpansion
         end
             
         def -(other)
-                          raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
-                          raise ArgumentError , 'Matriz no compatible' unless @fil == other.fil and @col == other.col
+                          raise ArgumentError , 'El argumento debe ser una matriz' unless other.is_a? Matriz
+                          raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
       
                           c = Matriz_Densa.new(@fil, @col)
                           i = 0
@@ -158,7 +166,7 @@ module MatrixExpansion
         end # *(other)
         
         def min
-            if(null_percent == 1.0)
+            if(porcentaje_nulos == 1.0)
                 return 0
             end
                     
@@ -178,7 +186,7 @@ module MatrixExpansion
         end
         
         def max
-            if(null_percent == 1.0)
+            if(porcentaje_nulos == 1.0)
                 return 0
             end
                     

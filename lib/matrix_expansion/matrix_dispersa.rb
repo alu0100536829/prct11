@@ -3,18 +3,15 @@ require "./lib/matrix_expansion/matrix_densa.rb"
 
 module MatrixExpansion
   class Matriz_Dispersa < Matriz  
-    def reset
+    
+    def initialize(n, m)
+        super
         @matrix = Array.new(@fil) # Array con @fil filas y ninguna columna (vacio)
         i = 0
         while(i < @fil)
             @matrix[i] = {}
             i += 1
         end
-    end
-    
-    def initialize(n, m)
-      super
-      reset
     end
     
     # Metodo factoria
@@ -38,7 +35,7 @@ module MatrixExpansion
       obj
     end #endmethod copy
     
-    def null_percent
+    def porcentaje_nulos
       total = @fil*@col
       no_nulos = 0
       
@@ -50,7 +47,7 @@ module MatrixExpansion
       
       nulos = total - no_nulos
       nulos.to_f/total.to_f
-    end #endmethod null_percent
+    end
     
     
     def set(i, j, value)
@@ -64,9 +61,9 @@ module MatrixExpansion
         @matrix[i][j] = value
       end
       
-      if(null_percent < 0.6) # Si se ha sobrepasado el número de elementos nulos, borramos el último elemento modificado
+      if(porcentaje_nulos < 0.6) # Si se ha sobrepasado el número de elementos nulos, borramos el último elemento modificado
           @matrix[i].delete(j)
-          puts "Borrado el elemento #{i},#{j} por sobrepasar el numero de elementos no nulos (Porcentaje actual: #{null_percent}"
+          puts "Borrado el elemento #{i},#{j} por sobrepasar el numero de elementos no nulos (Porcentaje actual: #{porcentaje_nulos}"
       end
       
     end #endmethod set
@@ -96,8 +93,8 @@ module MatrixExpansion
     end #endmethod get
 
     def +(other)
-        raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
-        raise ArgumentError , 'Matriz no compatible' unless @fil == other.fil and @col == other.col
+        raise ArgumentError , 'El argumento debe ser una matriz' unless other.is_a? Matriz
+        raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
         
         c = Matriz_Densa.new(@fil, @col)
         i = 0
@@ -109,15 +106,15 @@ module MatrixExpansion
             end 
             i += 1
         end
-        if(c.null_percent > 0.6)
+        if(c.porcentaje_nulos > 0.6)
             c = Matriz_Dispersa.densa_a_dispersa(c)
         end
         c
     end
         
     def -(other)
-        raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
-        raise ArgumentError , 'Matriz no compatible' unless @fil == other.N and @col == other.M
+        raise ArgumentError , 'El argumento debe ser una matriz' unless other.is_a? Matriz
+        raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
         
         c = Matriz_Densa.new(@fil, @col)
         i = 0
@@ -129,7 +126,7 @@ module MatrixExpansion
             end 
             i += 1
         end
-        if(c.null_percent > 0.6)
+        if(c.porcentaje_nulos > 0.6)
             c = Matriz_Dispersa.densa_a_dispersa(c)
         end
         c
@@ -150,7 +147,7 @@ module MatrixExpansion
                 i += 1
             end # while i
         else # Matriz * Matriz
-            raise ArgumentError , 'Matriz no compatible (A.fil == B.col)' unless @M == other.fil
+            raise ArgError , 'Matriz no compatible (A.fil == B.col)' unless @M == other.fil
             c = Matriz_Densa.new(@fil, other.col)
             i = 0
             while(i < @fil)
@@ -167,22 +164,29 @@ module MatrixExpansion
                 i += 1
             end # while i
         end # while else
-        if(c.null_percent > 0.6)
+        if(c.porcentaje_nulos > 0.6)
             c = Matriz_Dispersa.densa_a_dispersa(c)
         end  
         c
     end # *(other)
         
         def max
-          if(null_percent == 1.0)
+          if(porcentaje_nulos == 1.0)
             return nil # o return 0
           end
                 
           # Valor máximo: si todos los elementos son menores que el elemento nulo
           # Se devolverá el mayor elemento no nulo.
+          max = nil
           
-          max = @matrix[i].values[0]
-
+          # Asignar al primer valor no-nulo de la matriz
+          i = 0
+          while(max == nil)
+            if(@matrix[i].size != 0)
+                  max = @matrix[i].values[0]
+                end
+                i += 1
+          end
           
           # Iterar por todos los elementos no nulos para encontrar el maximo
           i = 0
@@ -197,7 +201,7 @@ module MatrixExpansion
         end
         
         def min
-            if(null_percent == 1.0)
+            if (porcentaje_nulos == 1.0)
             return 0
             end
                 
@@ -226,19 +230,5 @@ module MatrixExpansion
             min
         end
     
-    end #endclass
-end #end module
-
-m1 = MatrixExpansion::Matriz_Dispersa.new(3,3)
-m1.set(0,1,3)
-m1.set(1,1,4)
-m1.set(0,2,6)
-
-m2 = MatrixExpansion::Matriz_Dispersa.new(3,3)
-m2.set(0,1,3)
-m2.set(1,1,4)
-m2.set(0,2,6)
-
-puts (m1 + m2).to_s
-puts m1.min
-puts m1.max
+    end
+end
