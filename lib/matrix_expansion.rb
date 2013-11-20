@@ -1,10 +1,10 @@
-require "matrix_expansion/version"
-require "matrix_expansion/matrix.rb"
-require "matrix_expansion/matrix_densa.rb"
-require "matrix_expansion/matrix_dispersa.rb"
+require "./lib/matrix_expansion/version"
+require "./lib/matrix_expansion/matrix.rb"
+require "./lib/matrix_expansion/matrix_densa.rb"
+require "./lib/matrix_expansion/matrix_dispersa.rb"
 
-require "matrix_expansion/fraccion.rb"
-require "matrix_expansion/gcd.rb"
+require "./lib/matrix_expansion/fraccion.rb"
+require "./lib/matrix_expansion/gcd.rb"
 
 module MatrixExpansion
   # Your code goes here...

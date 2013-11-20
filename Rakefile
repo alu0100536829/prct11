@@ -26,5 +26,5 @@ end
 
 desc "Pruebas unitarias de las clases Matriz_Densa y Matriz_Dispersa" 
 task :tc do
-        sh "ruby -I. test/tc_matrix.rb"
+        sh "ruby -i. test/tc_matrix.rb"
 end

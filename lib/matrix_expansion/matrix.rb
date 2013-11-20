@@ -1,3 +1,19 @@
+=begin
+*******************************************************************************************
+* Autores: 
+       Teno González Dos Santos
+       Albano José Yanes Reyes
+* Fecha: 19/11/2013 -
+* Asignatura: Lenguujes y Paradigmas de Programación
+* Tercero de Grado en Ingeniería Informática
+* Universidad de la Laguna
+*
+* Practica 10: Matrices densas y dispersas
+********************************************************************************************
+=end
+
+# Clase Matriz
+
 require './lib/matrix_expansion/fraccion.rb'
 
 module MatrixExpansion
