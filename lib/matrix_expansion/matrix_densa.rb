@@ -17,18 +17,19 @@
 require "./lib/matrix_expansion/matrix.rb"
 
 module MatrixExpansion
+
+    include Enumerable
     class Matriz_Densa < Matriz
         
         # Crea una matriz anidando array e inicializa los valores a 0
         def initialize(n, m)
           super
+          # Se crean el array de filas con collect
+          @matrix = (0..(@fil-1)).collect {0}
           
-          @matrix = Array.new(@fil,0)
-          i = 0
-          while i < @fil
-            @matrix[i] = Array.new(@col,0)
-            i += 1  
-          end
+          # Se crea un array para cada filas con el numero de columnas, con each y collect
+          (0..(@col-1)).each { |i| @matrix[i] = (0..(@col-1)).collect{0}}
+          
         end
         
         # Da valores numericos a la matriz densa
@@ -90,7 +91,7 @@ module MatrixExpansion
           end
           
           nulos = total - no_nulos
-          nulos.to_f/total.to_f
+          nulos.to_f/total.to_f #/
         end
     
         # Muestra la matriz densa
@@ -108,6 +109,7 @@ module MatrixExpansion
           end
           s
         end
+
         
         # Suma de matrices densas
         def +(other)
@@ -115,14 +117,10 @@ module MatrixExpansion
             raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
             
             c = Matriz_Densa.new(@fil, @col)
-            i = 0
-            while(i < @fil)
-                j = 0
-                while(j < @col)
+            @fil.times do |i|
+                @col.times do |j|
                     c.matrix[i][j] = @matrix[i][j] + other.get(i,j)
-                    j += 1
-                end 
-                i += 1
+                end
             end
             c
         end
@@ -133,14 +131,10 @@ module MatrixExpansion
             raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
             
             c = Matriz_Densa.new(@fil, @col)
-            i = 0
-            while(i < @fil)
-                j = 0
-                while(j < @col)
+            @fil.times do |i|
+                @col.times do |j|
                     c.matrix[i][j] = @matrix[i][j] - other.get(i,j)
-                    j += 1
                 end
-                i += 1
             end
             c
         end
@@ -153,33 +147,22 @@ module MatrixExpansion
             #Si el argumento es un numero
             if(other.is_a? Numeric)
                 c = Matriz_Densa.new(@fil, @col)
-                i = 0
-                while(i < @N)
-                    j = 0
-                    while(j < @M)
-                        c.matrix = @matrix[i][j] * other
-                        j += 1
+                @fil.times do |i|
+                    @col.times do |j|
+                        c.matrix[i][j] = @matrix[i][j] * other
                     end
-                    i += 1
                 end
             #Si el arguumento es una matriz
             else
                 raise ArgumentError , 'Matriz no compatible (A.fil == B.col)' unless @col == other.fil
                 
                 c = Matriz_Densa.new(@fil, other.col)
-                i = 0
-                while(i < @fil)
-                    j = 0
-                    while(j < other.col)
-                        k = 0
-                        c.matrix[i][j] = 0
-                        while(k < @col)
-                            c.matrix[i][j] += @matrix[i][k] * other.get(k,j)
-                            k += 1
+                @fil.times do |i|
+                    @col.times do |j|
+                        (0..(@col-1)).inject(0) do |acc, k|
+                            c.matrix[i][j] = acc + (@matrix[i][k] * other.get(k,j))
                         end
-                        j += 1
                     end
-                    i += 1
                 end
             end
             
@@ -189,20 +172,14 @@ module MatrixExpansion
         
         # Calcula el minimo elemento de la matriz
         def min
-            # Establecemos valor del primer elemento
-            min = @matrix[0][0]
-            i = 0
             
+            # Establecemos valor del primer elemento
             # Fila a fila actualizando el valor minimo
-            while (i < @fil)
-                j = 0
-                while (j < @col)
-                    if (@matrix[i][j] < min)
-                        min = @matrix[i][j]
-                    end
-                    j += 1
+            @fil.times do |i|
+                (0..(@col-1)).inject(@matrix[0][0]) do |acc , j|
+                    acc > @matrix[i][j] ? acc : @matrix[i][j]
+                    min = acc
                 end
-                i += 1
             end
             min
         end
@@ -211,22 +188,20 @@ module MatrixExpansion
         def max
                 
             # Establecemos valor del primer elemento
-            max = @matrix[0][0]
-            i = 0
-            
             #Fila a fila actualizando el valor maximo
-            while (i < @fil)
-                j = 0
-                while (j < @col)
-                    if (@matrix[i][j] > max)
-                        max = @matrix[i][j]
-                    end
-                    j += 1
+             @fil.times do |i|
+                (0..(@col-1)).inject(@matrix[0][0]) do |acc , j|
+                    acc < @matrix[i][j] ? acc : @matrix[i][j]
+                    max = acc
                 end
-                i += 1
             end
             max
         end
     end
 end
+
+m1 = MatrixExpansion::Matriz_Densa.new(2,2)
+#m1.set_valores_num
+puts m1.min
+
 
