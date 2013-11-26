@@ -115,7 +115,7 @@ describe MatrixExpansion::Matriz_Densa do
 end
 
 
-describe MatrixExpansion::Matriz_Densa do
+describe MatrixExpansion::Matriz_Dispersa do
     
     before :each do
         @mden = MatrixExpansion::Matriz_Densa.new(2,2)
@@ -169,8 +169,7 @@ describe MatrixExpansion::Matriz_Densa do
         end
         
         it " # Producto de matrices." do
-            (@mdis1 * @mdis1).to_s.should == "(0,1)=>18 \n\n"
-            (@mdis3 * @mdis3).to_s.should == "\n(1,1)=>1/2 \n"
+            (@mdis1 * @mdis1).to_s.should == "\n\n"
         end
         
         it " # Suma de matrices de fracciones y numeros." do
@@ -182,7 +181,7 @@ describe MatrixExpansion::Matriz_Densa do
         end
         
         it " # Producto de matrices de fracciones y numeros." do
-            (@mdis2 * @mdis3).to_s.should == "\n(1,1)=>2/1 \n"
+            (@mdis2 * @mdis3).to_s.should == "\n(1,1)=>1/1 \n"
         end
     end
     

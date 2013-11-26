@@ -24,11 +24,7 @@ module MatrixExpansion
         def initialize(n, m)
             super
             @matrix = Array.new(@fil)
-            i = 0
-            while(i < @fil)
-                @matrix[i] = {}
-                i += 1
-            end
+            (0..(@col-1)).each { |i| @matrix[i] = {} }
         end
         
         # Metodo de la clase que permite convertir una matriz densa en una dispersa 
@@ -122,14 +118,10 @@ module MatrixExpansion
             raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
             
             c = Matriz_Densa.new(@fil, @col)
-            i = 0
-            while(i < @fil)
-                j = 0
-                while(j < @col)
+            @fil.times do |i|
+                @col.times do |j|
                     c.matrix[i][j] = get(i,j) + other.get(i,j)
-                    j += 1
-                end 
-                i += 1
+                end
             end
             # Si el resultado es una matriz dispersa se convierte la densa
             if(c.porcentaje_nulos > 0.6)
@@ -144,16 +136,11 @@ module MatrixExpansion
             raise ArgumentError , 'Las matrices deben ser del mismo tamano' unless @fil == other.fil and @col == other.col
             
             c = Matriz_Densa.new(@fil, @col)
-            i = 0
-            while(i < @fil)
-                j = 0
-                while(j < @col)
+            @fil.times do |i|
+                @col.times do |j|
                     c.matrix[i][j] = get(i,j) - other.get(i,j)
-                    j += 1
-                end 
-                i += 1
+                end
             end
-            
             # Si el resultado es una matriz dispersa se convierte la densa
             if(c.porcentaje_nulos > 0.6)
                 c = Matriz_Dispersa.densa_a_dispersa(c)
@@ -168,32 +155,21 @@ module MatrixExpansion
             # Si el arguento es un numero
             if(other.is_a? Numeric)
                 c = Matriz_Densa.new(@fil, @col)
-                i = 0
-                while(i < @fil)
-                    j = 0
-                    while(j < @col)
+                @fil.times do |i|
+                    @col.times do |j|
                         c.matrix[i][j] = get(i,j) * other
-                        j += 1
                     end
-                    i += 1
                 end
             # Si el argumento es una matriz
             else
                 raise ArgumentError , 'Matriz no compatible (A.fil == B.col)' unless @col == other.fil
                 c = Matriz_Densa.new(@fil, other.col)
-                i = 0
-                while(i < @fil)
-                    j = 0
-                    while(j < other.fil)
-                        k = 0
-                        c.matrix[i][j] = 0
-                        while(k < @col)
-                            c.matrix[i][j] = c.matrix[i][j] + (get(i,j) * other.get(i,j))
-                            k += 1
+               @fil.times do |i|
+                    @col.times do |j|
+                        (0..(@col-1)).inject(0) do |acc, k|
+                            c.matrix[i][j] = acc + (get(i,k) * other.get(k,j))
                         end
-                        j += 1
                     end
-                    i += 1
                 end
             end
             
@@ -224,11 +200,10 @@ module MatrixExpansion
             
             # Iterar por todos los elementos no nulos para encontrar el maximo
             i = 0
-            while(i < @matrix.size)
+            (0..(@matrix.size-1)).each do |i|
                 if(@matrix[i].values.max != nil and @matrix[i].values.max > max)
                     max = @matrix[i].values.max
                 end
-                i += 1
             end
             
             max
@@ -252,13 +227,12 @@ module MatrixExpansion
                 i += 1
             end
             
-            # Iterar por todos los elementos no nulos para encontrar el maximo
+            # Iterar por todos los elementos no nulos para encontrar el minimo
             i = 0
-            while(i < @matrix.size)
+            (0..@matrix.size-1).each do |i|
                 if(@matrix[i].values.min != nil and @matrix[i].values.min < min)
                     min = @matrix[i].values.min
                 end
-            i += 1
             end
             
             min
@@ -266,3 +240,5 @@ module MatrixExpansion
     
     end
 end
+
+

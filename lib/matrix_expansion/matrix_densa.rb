@@ -152,7 +152,7 @@ module MatrixExpansion
                         c.matrix[i][j] = @matrix[i][j] * other
                     end
                 end
-            #Si el arguumento es una matriz
+            #Si el argumento es una matriz
             else
                 raise ArgumentError , 'Matriz no compatible (A.fil == B.col)' unless @col == other.fil
                 
@@ -200,9 +200,5 @@ module MatrixExpansion
     end
 end
 
-m1 = MatrixExpansion::Matriz_Densa.new(2,2)
-m1.set_valores_num
-puts m1.min
-puts m1.max
 
 
