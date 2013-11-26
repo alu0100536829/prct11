@@ -3,6 +3,7 @@
 ## Introducción
     
 Gema que permite el uso de matrices densas y dispersas a través de la herencia de una matriz simple. Todas las operaciones con números y fracciones incluidas.
+Métodos realizados con programación funcional.
 
 ## Instalación
 
