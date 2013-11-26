@@ -173,12 +173,12 @@ module MatrixExpansion
         # Calcula el minimo elemento de la matriz
         def min
             
+            min = @matrix[0][0]
             # Establecemos valor del primer elemento
             # Fila a fila actualizando el valor minimo
             @fil.times do |i|
-                (0..(@col-1)).inject(@matrix[0][0]) do |acc , j|
-                    acc > @matrix[i][j] ? acc : @matrix[i][j]
-                    min = acc
+                @matrix[i].inject(min) do |acc , j|
+                    acc < j ? min : min = j
                 end
             end
             min
@@ -186,13 +186,13 @@ module MatrixExpansion
         
         # Calcula el maximo elemento de la matriz
         def max
-                
+            
+            max = @matrix[0][0]
             # Establecemos valor del primer elemento
             #Fila a fila actualizando el valor maximo
              @fil.times do |i|
-                (0..(@col-1)).inject(@matrix[0][0]) do |acc , j|
-                    acc < @matrix[i][j] ? acc : @matrix[i][j]
-                    max = acc
+                @matrix[i].inject(max) do |acc , j|
+                    acc > j ? max : max = j
                 end
             end
             max
@@ -201,7 +201,8 @@ module MatrixExpansion
 end
 
 m1 = MatrixExpansion::Matriz_Densa.new(2,2)
-#m1.set_valores_num
+m1.set_valores_num
 puts m1.min
+puts m1.max
 
 
