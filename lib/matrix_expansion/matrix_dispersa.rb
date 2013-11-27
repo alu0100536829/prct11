@@ -1,16 +1,33 @@
-=begin
-*******************************************************************************************
-* Autores: 
-       Teno González Dos Santos
-       Albano José Yanes Reyes
-* Fecha: 19/11/2013 -
-* Asignatura: Lenguujes y Paradigmas de Programación
-* Tercero de Grado en Ingeniería Informática
-* Universidad de la Laguna
-*
-* Practica 10: Matrices densas y dispersas
-********************************************************************************************
-=end
+#
+# = matrix_dispersa.rb
+#  
+#    Autores::   Teno González Dos Santos,  Albano José Yanes Reyes
+#    Fecha:: 27/11/2013 
+#    Asignatura:: Lenguajes y Paradigmas de Programación
+#    Curso:: Tercero de Grado en Ingeniería Informática
+#    Universidad de la Laguna
+#
+#  == Practica 10: Matrices densas y dispersas
+#     Considere la Gema para la representación de Matrices que ha desarrollado en prácticas 
+#     anteriores. Los objetivos de esta práctica son dos:
+#          <b>Documentar la gema \<em>(utlizando RDOC).</em></b>
+#         <b>Desarrollar métodos con la filosofía de la <em>programación funcional.</em></b>
+#
+#  === Clase matriz Dispersa
+#        Definicion de la clase Matriz_Dispersa compuesta por:
+#          - metodo Initialize
+#          - metodo set_valores_num
+#          - metodo set_valores_fracc
+#          - metodo get(i,j)
+#          - metodo porcentaje_nulos
+#          - metodo to_s
+#          - metodo +(other)
+#          - metodo -(other)
+#          - metodo *(other)
+#          - metodo max
+#          - metodo min
+#
+
 
 # Clase Matriz_Dispersa
 
