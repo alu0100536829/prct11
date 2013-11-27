@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>matrix_expansion.gemspec - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./documentacion/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./matrix_expansion_gemspec.html">matrix_expansion.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Fraccion.html">Fraccion</a>
+  
+    <li><a href="./MatrixExpansion.html">MatrixExpansion</a>
+  
+    <li><a href="./MatrixExpansion/Matriz.html">MatrixExpansion::Matriz</a>
+  
+    <li><a href="./MatrixExpansion/Matriz_Densa.html">MatrixExpansion::Matriz_Densa</a>
+  
+    <li><a href="./MatrixExpansion/Matriz_Dispersa.html">MatrixExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Test_Matriz.html">Test_Matriz</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>require File.expand_path(&#39;../lib/matrix_expansion/version&#39;,
+__FILE__)</p>
+
+<p>Gem::Specification.new do |gem|</p>
+
+<pre class="ruby"><span class="ruby-identifier">gem</span>.<span class="ruby-identifier">authors</span>       = [<span class="ruby-string">&quot;Teno Gonzalez Dos Santos / Albano Jose Yanes Reyes&quot;</span>]
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">email</span>         = [<span class="ruby-string">&quot;alu0100536829@ull.edu.es / alu0100457094@ull.edu.es&quot;</span>]
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">description</span>   = <span class="ruby-string">%q{Gema de matrices densas y dispersas}</span>
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">summary</span>       = <span class="ruby-string">%q{Matrices densas y dispersas.}</span>
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">homepage</span>      = <span class="ruby-string">&quot;https://github.com/alu01005368291/prct10.git&quot;</span>
+
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">files</span>         = <span class="ruby-value">%xgit ls-files`</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">$\</span>)
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">executables</span>   = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">%r{^bin/}</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">f</span>) }
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">test_files</span>    = <span class="ruby-identifier">gem</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">%r{^(test|spec|features)/}</span>)
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">name</span>          = <span class="ruby-string">&quot;matrix_expansion&quot;</span>
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">require_paths</span> = [<span class="ruby-string">&quot;lib&quot;</span>]
+<span class="ruby-identifier">gem</span>.<span class="ruby-identifier">version</span>       = <span class="ruby-constant">MatrixExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>
+</pre>
+
+<p>end</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

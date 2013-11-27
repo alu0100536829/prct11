@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>README - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-MatrixExpansion">MatrixExpansion</a>
+      <li><a href="#label-Introducci%C3%B3n">Introducción</a>
+      <li><a href="#label-Instalaci%C3%B3n">Instalación</a>
+      <li><a href="#label-Dise%C3%B1o">Diseño</a>
+    </ul>
+  </nav>
+</div>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./documentacion/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./matrix_expansion_gemspec.html">matrix_expansion.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Fraccion.html">Fraccion</a>
+  
+    <li><a href="./MatrixExpansion.html">MatrixExpansion</a>
+  
+    <li><a href="./MatrixExpansion/Matriz.html">MatrixExpansion::Matriz</a>
+  
+    <li><a href="./MatrixExpansion/Matriz_Densa.html">MatrixExpansion::Matriz_Densa</a>
+  
+    <li><a href="./MatrixExpansion/Matriz_Dispersa.html">MatrixExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Test_Matriz.html">Test_Matriz</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<h1 id="label-MatrixExpansion"><a href="MatrixExpansion.html">MatrixExpansion</a><span><a href="#label-MatrixExpansion">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<h2 id="label-Introducci%C3%B3n">Introducción<span><a href="#label-Introducci%C3%B3n">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Gema que permite el uso de matrices densas y dispersas a través de la
+herencia de una matriz simple. Todas las operaciones con números y
+fracciones incluidas. Métodos realizados con programación funcional.</p>
+
+<h2 id="label-Instalaci%C3%B3n">Instalación<span><a href="#label-Instalaci%C3%B3n">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Add this line to your application&#39;s Gemfile:</p>
+
+<pre>gem &#39;matrix_expansion&#39;</pre>
+
+<p>And then execute:</p>
+
+<pre>$ bundle</pre>
+
+<p>Or install it yourself as:</p>
+
+<pre>$ gem install matrix_expansion</pre>
+
+<h2 id="label-Dise%C3%B1o">Diseño<span><a href="#label-Dise%C3%B1o">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>A la hora de realizar las matrices densas se ha realizado de forma natural
+(como para cualquier matriz simple). El planteamiento importante es para la
+representación de las matrices dispersas. Hemos decidido finalmente, tras
+haber pensado en implementarlo con varios vectores, en que era más
+sencillo, tanto para el acceso como para las operaciones, implementarlo con
+un array de hash. Cada fila es un array que contiene hashes, donde la clave
+es la columna del elemento no nulo y el valor es el propio valor del
+elemento no nulo. De esta forma, solamente se almacenan los valores nulos.
+Si se accediera a otra posición se devolvería 0 (aunque este no este
+almacenado en la matriz dispersa para ahorrar memoria).</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

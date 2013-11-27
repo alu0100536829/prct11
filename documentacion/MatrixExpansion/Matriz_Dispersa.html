@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class MatrixExpansion::Matriz_Dispersa - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/matrix_expansion/matrix_dispersa.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Matriz.html">MatrixExpansion::Matriz</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-densa_a_dispersa">::densa_a_dispersa</a>
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-get">#get</a>
+    
+    <li ><a href="#method-i-max">#max</a>
+    
+    <li ><a href="#method-i-min">#min</a>
+    
+    <li ><a href="#method-i-porcentaje_nulos">#porcentaje_nulos</a>
+    
+    <li ><a href="#method-i-set">#set</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../documentacion/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../matrix_expansion_gemspec.html">matrix_expansion.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Fraccion.html">Fraccion</a>
+  
+    <li><a href="../MatrixExpansion.html">MatrixExpansion</a>
+  
+    <li><a href="../MatrixExpansion/Matriz.html">MatrixExpansion::Matriz</a>
+  
+    <li><a href="../MatrixExpansion/Matriz_Densa.html">MatrixExpansion::Matriz_Densa</a>
+  
+    <li><a href="../MatrixExpansion/Matriz_Dispersa.html">MatrixExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../Test_Matriz.html">Test_Matriz</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MatrixExpansion::Matriz_Dispersa</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-densa_a_dispersa" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">densa_a_dispersa</span><span
+            class="method-args">(matriz)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo de la clase que permite convertir una matriz densa en una dispersa</p>
+          
+          
+
+          
+          <div class="method-source-code" id="densa_a_dispersa-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">densa_a_dispersa</span>(<span class="ruby-identifier">matriz</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;El parametro debe ser una matriz densa&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">MatrixExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">Matriz_Densa</span>
+    
+    <span class="ruby-identifier">obj</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">fil</span>, <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">col</span>)
+    
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">fil</span>)
+        <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">col</span>)
+            <span class="ruby-identifier">value</span> = <span class="ruby-identifier">matriz</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>]
+      
+            <span class="ruby-keyword">if</span>( <span class="ruby-identifier">value</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+                <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">value</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- densa_a_dispersa-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- densa_a_dispersa-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(n, m)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Se crea un array de hashes en el que en cada fila i, por cada elemento no
+nulo hay un hash de clave j y valor no_nulo</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Matriz.html#method-c-new">MatrixExpansion::Matriz.new</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">n</span>, <span class="ruby-identifier">m</span>)
+    <span class="ruby-keyword">super</span>
+    <span class="ruby-ivar">@matrix</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>)
+    (<span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@col</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>] = {} }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Producto de matrices</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;El argumento debe ser una matriz&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+    
+    <span class="ruby-comment"># Si el arguento es un numero</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>)
+        <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-ivar">@col</span>)
+        <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+            <span class="ruby-ivar">@col</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Si el argumento es una matriz</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Matriz no compatible (A.fil == B.col)&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span>
+        <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>)
+       <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+            <span class="ruby-ivar">@col</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                (<span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@col</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)).<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">acc</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+                    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">acc</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">k</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>))
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-comment"># Si el resultado es una matriz dispersa se convierte la densa</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+        <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">densa_a_dispersa</span>(<span class="ruby-identifier">c</span>)
+    <span class="ruby-keyword">end</span>  
+    <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Suma de matrices</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;El argumento debe ser una matriz&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Las matrices deben ser del mismo tamano&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>
+    
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-ivar">@col</span>)
+    <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@col</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Si el resultado es una matriz dispersa se convierte la densa</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+        <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">densa_a_dispersa</span>(<span class="ruby-identifier">c</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Resta de matrices</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;El argumento debe ser una matriz&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Las matrices deben ser del mismo tamano&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@fil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">fil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@col</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">col</span>
+    
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@fil</span>, <span class="ruby-ivar">@col</span>)
+    <span class="ruby-ivar">@fil</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@col</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">c</span>.<span class="ruby-identifier">matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Si el resultado es una matriz dispersa se convierte la densa</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+        <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">densa_a_dispersa</span>(<span class="ruby-identifier">c</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-get" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get</span><span
+            class="method-args">(i, j)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo que devuelve el valor de la posicion dentro de la matriz si es no
+nulo, o 0 eoc</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>)
+    <span class="ruby-keyword">if</span>( <span class="ruby-operator">!</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;=</span><span class="ruby-ivar">@fil</span> <span class="ruby-keyword">or</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">j</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@col</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>]
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get-method -->
+
+    
+      <div id="method-i-max" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">max</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula el valor maximo de la matriz dispersa</p>
+          
+          
+
+          
+          <div class="method-source-code" id="max-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>
+    <span class="ruby-comment"># Si toda la matriz es 0, el maximo sera 0</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">==</span> <span class="ruby-value">1.0</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">end</span>
+        
+    <span class="ruby-identifier">max</span> = <span class="ruby-keyword">nil</span>
+    
+    <span class="ruby-comment"># Asignar al primer valor no-nulo de la matriz (el primero que encuentre hasta que deje de ser nil)</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">max</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+            <span class="ruby-identifier">max</span> = <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-comment"># Iterar por todos los elementos no nulos para encontrar el maximo</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    (<span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">max</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">max</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max</span>)
+            <span class="ruby-identifier">max</span> = <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">max</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- max-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- max-method -->
+
+    
+      <div id="method-i-min" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">min</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula el valor maximo de la matriz dispersa</p>
+          
+          
+
+          
+          <div class="method-source-code" id="min-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>
+    <span class="ruby-comment"># Si toda la matriz es 0, el minimo sera 0</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">==</span> <span class="ruby-value">1.0</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">min</span> = <span class="ruby-keyword">nil</span>
+    
+    <span class="ruby-comment"># Asignar al primer valor no-nulo de la matriz (el primero que encuentre hasta que deje de ser nil)</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">min</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+            <span class="ruby-identifier">min</span> = <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-comment"># Iterar por todos los elementos no nulos para encontrar el minimo</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">min</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">min</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">min</span>)
+            <span class="ruby-identifier">min</span> = <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">min</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- min-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- min-method -->
+
+    
+      <div id="method-i-porcentaje_nulos" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">porcentaje_nulos</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula el procentaje de nulos en la matriz dispersa</p>
+          
+          
+
+          
+          <div class="method-source-code" id="porcentaje_nulos-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">porcentaje_nulos</span>
+    <span class="ruby-identifier">total</span> = <span class="ruby-ivar">@fil</span><span class="ruby-operator">*</span><span class="ruby-ivar">@col</span>
+    <span class="ruby-identifier">no_nulos</span> = <span class="ruby-value">0</span>
+    
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@fil</span>)
+        <span class="ruby-comment"># El tamaño de cada fila es el numero de elementos no nulos que hay en ellas</span>
+        <span class="ruby-identifier">no_nulos</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">size</span>
+        <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-identifier">nulos</span> = <span class="ruby-identifier">total</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">no_nulos</span>
+    <span class="ruby-identifier">nulos</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">total</span>.<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- porcentaje_nulos-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- porcentaje_nulos-method -->
+
+    
+      <div id="method-i-set" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set</span><span
+            class="method-args">(i, j, valor)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo para asignar valores a la matriz dispersa que permite controlar que
+siga siendo dispersa en todo momento</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">valor</span>)
+    <span class="ruby-comment"># Se accede dentro de los limites de la  matriz</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-operator">!</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;=</span><span class="ruby-ivar">@fil</span> <span class="ruby-keyword">or</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">j</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@col</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+     <span class="ruby-comment"># Borrar elemento si es un valor nulo. Si no, introducirlo</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">valor</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">valor</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+        <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">j</span>)
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">valor</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Si se ha sobrepasado el número de elementos nulos, borramos el último elemento modificado</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">porcentaje_nulos</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0.6</span>)
+        <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">j</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Borrado el elemento #{i},#{j} por sobrepasar el numero de elementos no nulos (Porcentaje actual: #{porcentaje_nulos}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo que muestra la matriz dispersa de la forma: (0,1)=&gt;2  (0,2)=&gt;3</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span>,<span class="ruby-value">3</span>)=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/matrix_expansion/matrix_dispersa.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+    
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">salida</span> = <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@fil</span>)
+        <span class="ruby-ivar">@matrix</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">salida</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;(#{i},#{k.to_s})=&gt;#{v.to_s} &quot;</span>}
+        <span class="ruby-identifier">salida</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n&quot;</span>
+        <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">salida</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
