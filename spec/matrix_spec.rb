@@ -10,8 +10,8 @@
 #  == Practica 10: Matrices densas y dispersas
 #     Considere la Gema para la representación de Matrices que ha desarrollado en prácticas 
 #     anteriores. Los objetivos de esta práctica son dos:
-#         Documentar la gema (utlizando RDOC).
-#         Desarrollar métodos con la filosofía de la programación funcional.
+#          <b>Documentar la gema \<em>(utlizando RDOC).</em></b>
+#         <b>Desarrollar métodos con la filosofía de la <em>programación funcional.</em></b>
 #
 #  === Pruebas rspec
 #        Definicion de las pruebas rspec compuesta para los tipos matriz densa y dipersa
