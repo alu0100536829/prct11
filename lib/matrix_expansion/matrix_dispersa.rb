@@ -216,7 +216,6 @@ module MatrixExpansion
             end
             
             # Iterar por todos los elementos no nulos para encontrar el maximo
-            i = 0
             (0..(@matrix.size-1)).each do |i|
                 if(@matrix[i].values.max != nil and @matrix[i].values.max > max)
                     max = @matrix[i].values.max
@@ -245,7 +244,6 @@ module MatrixExpansion
             end
             
             # Iterar por todos los elementos no nulos para encontrar el minimo
-            i = 0
             (0..@matrix.size-1).each do |i|
                 if(@matrix[i].values.min != nil and @matrix[i].values.min < min)
                     min = @matrix[i].values.min
